@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before do
+    @category = Category.create(name: "cool")
+  end
+
+  it "has a name" do
+    expect(@category.name).to eq("cool")
+  end
 end
